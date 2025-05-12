@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>無聊GPT做做別太大期望</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <audio id="bgm" src="蠟筆小新主題曲OP1.mp3 "></audio>  <!-- 移除 autoplay 和 loop -->
+</head>
+<body>
+  <div id="gate">
+    <p id="typeText"></p>
+    <h1>輸入正確日期才能進入</h1>
+    <input type="text" id="dateInput" placeholder="給妳提示了：????0512">
+    <button onclick="checkDate()">進入</button>
+    <p id="error" class="hidden">日期錯誤，再試一次！</p>
+  </div>
+
+  <div id="quiz" class="hidden">
+    <h2 id="question"></h2>
+    <input type="text" id="answerInput">
+    <button onclick="checkAnswer()">提交</button>
+    <p id="result"></p>
+    <figure id="imageContainer" class="hidden">
+        <img id="rewardImage" src="" alt="reward">
+        <figcaption id="imageCaption"></figcaption>
+    </figure>
+    <button id="nextBtn" class="hidden" onclick="nextQuestion()">下一題</button>
+
+  </div>
+
+  <div id="finalMessage" class="hidden">
+  <div id="finalText"></div>
+  <div id="finalImageContainer" class="hidden">
+    <figure>
+      <img src="images/last.jpg" alt="reward">
+      <figcaption>照片糊糊的如果挑到醜的那就抱歉啦</figcaption>
+    </figure>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+
+
+  <audio id="bgm" src="bgm.mp3" autoplay loop></audio>
+
+</body>
+</html>

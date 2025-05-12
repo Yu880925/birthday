@@ -1,0 +1,61 @@
+body {
+  font-family: 'Microsoft JhengHei', sans-serif;
+  text-align: center;
+  padding: 50px;
+  background-color: #fff0f5;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffb6c1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input, button {
+  width: 80%;
+  max-width: 300px;
+  font-size: 18px;
+}
+
+#rewardImage {
+  width: 300px;
+  margin-top: 20px;
+}
+
+
+#typeText::after {
+  content: "|";
+  animation: blink 1s step-start infinite;
+}
+
+/* ✨ 閃閃背景動畫 ✨ */
+@keyframes sparkle {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+body.sparkle-background {
+  background-image: radial-gradient(white 1px, transparent 1px),
+                    radial-gradient(#fff8dc 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  animation: sparkle 5s linear infinite;
+}
+
